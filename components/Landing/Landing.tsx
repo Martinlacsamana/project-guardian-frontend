@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Hero from './Hero/Hero'
+import ImageCarousel from './ImageCarousel'
 
 export default function LandingPage() {
   return (
@@ -7,6 +8,7 @@ export default function LandingPage() {
       <main className="flex-grow">
         
         <Hero/>
+        <ImageCarousel/>
 
         <section className="px-4 py-12 bg-white">
           <div className="container mx-auto">

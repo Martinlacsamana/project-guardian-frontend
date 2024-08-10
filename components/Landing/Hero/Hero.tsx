@@ -2,9 +2,9 @@ import React from "react"; // Importing React
 
 const Hero = () => {
     return (
-        <section className="px-4 py-12 md:py-24 lg:py-32 bg-gradient-to-b from-white to-blue-100">
+        <section className="px-4 py-12 pb-36 bg-gradient-to-b from-white to-blue-200 shadow-lg">
             {/* Container for the hero section */}
-            <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div className="container mx-auto flex flex-col md:flex-row justify-between items-end px-12"> {/* Changed items-center to items-end */}
                 {/* Left side content */}
                 <div className="md:w-1/3 mb-8 md:mb-0">
                     {/* Main heading */}
@@ -26,18 +26,11 @@ const Hero = () => {
                             Journal Now
                         </button>
                     </div>
-                
-                    
-
                 </div>
                 {/* Right side image */}
                 <div className="md:w-1/2">
-                    <div className="bg-white p-4 rounded-lg shadow-lg">
-                        <img 
-                            src="/placeholder.svg?height=300&width=500" 
-                            alt="Journaling App Interface" 
-                            className="w-full h-auto"
-                        />
+                    <div className="bg-gray-300 p-4 rounded-lg shadow-md h-96 w-full">
+                        {/* Placeholder for the image */}
                     </div>
                 </div>
             </div>
@@ -45,4 +38,4 @@ const Hero = () => {
     );
 }
 
-export default Hero; // Exporting the Hero component
+export default Hero; 
