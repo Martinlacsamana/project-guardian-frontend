@@ -16,7 +16,7 @@ const Hero = () => {
         
             <div className="flex flex-col items-center justify-center h-full px-6 md:px-12 gap-12">
                 {/* TEXT */}
-                <h2 className="text-center text-5xl font-light tracking-tight text-white">How are you feeling?</h2>
+                <h2 className="text-center text-5xl font-light tracking-tight text-white">What do you want to journal?</h2>
 
                 
                 {/* LANDING BAR */}

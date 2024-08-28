@@ -8,12 +8,27 @@ const LandingBar = () => {
     const isDisabled = input === ""
 
     const placeholders = [
-        "Write a Message",
-        "How are you feeling today?",
-        "What's on your mind?",
-        "Share your thoughts...",
-        "Reflect on your day..."
-    ]
+        "Reflect on your day...",
+        "Talk about work...",
+        "Rant about traffic...",
+        "Complain about your crush...",
+        "Celebrate a small win...",
+        "Describe your coffee order...",
+        "Grumble about the weather...",
+        "List your current obsessions...",
+        "Overthink a text message...",
+        "Plan your dream vacation...",
+        "Analyze your last Netflix binge...",
+        "Debate your lunch choices...",
+        "Fantasize about winning the lottery...",
+        "Critique your Spotify recommendations...",
+        "Ponder life's mysteries...",
+        "Justify your online shopping spree...",
+        "Recap your weirdest dream...",
+        "Rate your day out of 10...",
+        "Brainstorm your next big idea...",
+        "Confess your guilty pleasures..."
+    ];
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -24,9 +39,9 @@ const LandingBar = () => {
                         (prevIndex + 1) % placeholders.length
                     )
                     setIsVisible(true) // Start fade in
-                }, 300) // Wait for fade out before changing text
+                }, 400) // Wait for fade out before changing text
             }
-        }, 1500)
+        }, 2000)
 
         return () => clearInterval(interval)
     }, [input])
