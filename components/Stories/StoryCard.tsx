@@ -1,9 +1,10 @@
 import React from 'react';
+import { Eye } from 'lucide-react';
 
 interface StoryCardProps {
     title: string;
     icon: string;
-    createdAt: string; // New prop for creation date
+    createdAt: string;
     summary: string;
     sentiment: number; // 0-100
 }
@@ -18,14 +19,22 @@ const StoryCard: React.FC<StoryCardProps> = ({ title, icon, createdAt, summary, 
     };
 
     return (
-        <div className=" border border-3 border-gray-800 bg-opacity-90 rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow duration-300">
-            <div className="flex items-center mb-1">
-                <span className="text-2xl mr-2">{icon}</span>
-                <h2 className="text-lg font-semibold text-white opacity-90">{title}</h2>
+        <div className="border border-3 border-gray-800 bg-opacity-90 rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col h-full relative group">
+            {/* Overlay */}
+            <div className="absolute inset-0 cursor-pointer bg-gray-800 bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg space-x-1">
+                <span className="text-white text-lg font-semibold">View </span>
+                <Eye/>
             </div>
-            <p className="text-xs text-gray-400 mb-2">{createdAt}</p>
-            <p className="text-sm text-gray-300 mb-4">{summary}</p>
-            <div className="flex items-center">
+            
+            <div className="flex-grow">
+                <div className="flex items-center mb-1">
+                    <span className="text-2xl mr-2">{icon}</span>
+                    <h2 className="text-lg font-semibold text-white">{title}</h2>
+                </div>
+                <p className="text-xs text-gray-400 mb-2">{createdAt}</p>
+                <p className="text-sm text-gray-300">{summary}</p>
+            </div>
+            <div className="flex items-center mt-4">
                 <div className="text-sm text-gray-400 mr-2">Sentiment:</div>
                 <div className={`w-16 h-2 rounded-full ${getSentimentColor(sentiment)}`}></div>
                 <div className="text-sm text-gray-400 ml-2">{sentiment}%</div>

@@ -30,7 +30,7 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }: Props) => {
     ];
 
     return (
-        <div className={`fixed top-0 left-0 h-full bg-black bg-opacity-90 border-r border-r-gray-800 shadow-lg transition-all duration-300 z-50 ${isSidebarOpen ? 'w-64' : 'w-0'} overflow-hidden rounded-tr-1xl rounded-br-1xl`}>
+        <div className={`fixed top-0 left-0 h-full bg-gray-800 bg-opacity-60 border-r border-r-gray-800 shadow-lg transition-all duration-300 z-50 ${isSidebarOpen ? 'w-64' : 'w-0'} overflow-hidden rounded-tr-1xl rounded-br-1xl`}>
             <div className="h-full flex flex-col w-64 p-3">
                 {/* SIDEBAR HEADER */}
                 <div className="flex justify-between items-center px-3 pt-4 pb-6">
