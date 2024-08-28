@@ -1,6 +1,5 @@
-import Link from 'next/link'
+
 import Hero from './Hero/Hero'
-import ImageCarousel from './ImageCarousel'
 
 export default function LandingPage() {
   return (
@@ -8,9 +7,11 @@ export default function LandingPage() {
       <main className="flex-grow">
         
         <Hero/>
-        <ImageCarousel/>
 
-        <section className="px-4 py-12 bg-white">
+
+        
+
+        <section className="px-4 py-12">
           <div className="container mx-auto">
             <h2 className="text-3xl font-bold mb-4 text-blue-800">What is Your Journal Guardian?</h2>
             <p className="text-xl text-gray-700">
@@ -18,11 +19,14 @@ export default function LandingPage() {
             </p>
           </div>
         </section>
+
+
+
       </main>
 
-      <footer className="bg-blue-50 py-8">
-        <div className="container mx-auto text-center text-gray-600">
-          <p>&copy; 2024 Your Journal Guardian. All rights reserved.</p>
+      <footer className="bg-black shadow-md py-8">
+        <div className="container mx-auto text-center text-gray-500">
+          <p>&copy; 2024 Your Project Guardian. All rights reserved.</p>
         </div>
       </footer>
     </div>

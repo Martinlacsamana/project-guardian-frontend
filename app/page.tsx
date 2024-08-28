@@ -3,7 +3,7 @@ import LandingPage from "@/components/Landing/Landing";
 
 export default function Home() {
   return (
-    <main className="">
+    <main className="bg-black">
       <LandingPage/>
     </main>
   );

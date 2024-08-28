@@ -1,6 +1,6 @@
 import UserMessageCard from "@/components/Chatbot/UserMessageCard"
 import AIMessageCard from "@/components/Chatbot/AIResponse"
-import InputBar from "@/components/Chatbot/InputBar"
+import ChatBar from "@/components/Chatbot/ChatBar"
 
 const Conversation = () => {
     return (
@@ -34,7 +34,7 @@ const Conversation = () => {
 
                 <div className="fixed bottom-0 pb-4 w-full bg-[#1C1C1C]">
                     <div className="w-1/2 mx-auto">
-                        <InputBar />
+                        <ChatBar />
                     </div>
                 </div>
             </div>

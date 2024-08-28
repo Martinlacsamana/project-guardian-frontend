@@ -4,14 +4,14 @@ import { CircleArrowUp } from "lucide-react"
 
 
 
-const InputBar = () => {
+const ChatBar = () => {
     
     const [input, setInput] = useState("")
     const isDisabled = (input === ''); // Set this based on your logic
     
 
     return (
-        <div className="relative w-full rounded-[26px] p-1.5 transition-colors bg-[#444654] bg-opacity-30">
+        <div className="relative w-full rounded-[26px] p-1 transition-colors bg-[#444654] bg-opacity-30">
             <textarea 
                 className="w-full h-12 resize-none border-0 bg-transparent px-4 py-3 rounded-[26px] pr-10 flex items-center opacity-90"
                 placeholder="Write a Message"
@@ -25,4 +25,4 @@ const InputBar = () => {
     )
 }
 
-export default InputBar
+export default ChatBar
