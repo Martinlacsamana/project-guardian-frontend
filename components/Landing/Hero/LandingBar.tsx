@@ -39,9 +39,9 @@ const LandingBar = () => {
                         (prevIndex + 1) % placeholders.length
                     )
                     setIsVisible(true) // Start fade in
-                }, 400) // Wait for fade out before changing text
+                }, 350) // Wait for fade out before changing text
             }
-        }, 2000)
+        }, 2500)
 
         return () => clearInterval(interval)
     }, [input])

@@ -11,7 +11,7 @@ const Hero = () => {
 
 
     return (
-        <section className="w-[95%] mx-auto px-4 py-12 bg-[#1C1C1C] h-[580px] shadow-lg rounded-lg">
+        <section className="w-[95%] mx-auto px-4 py-12 bg-gray-800 bg-opacity-60 h-[580px] shadow-lg rounded-lg">
         
         
             <div className="flex flex-col items-center justify-center h-full px-6 md:px-12 gap-12">
