@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import Sidebar from '@/components/Stories/Sidebar/Sidebar'
 import StoryCard from '@/components/Stories/StoryCard'
+import StoryBar from '@/components/Stories/StoryBar'
 import { PanelsTopLeft } from 'lucide-react'
 
 const Stories = () => {
@@ -37,21 +38,20 @@ const Stories = () => {
 
 
                     {/* HEADER */}
-                    <div className="flex justify-between items-center mb-8">
-                        <div className="flex items-center space-x-4 ">
+                    <div className="flex justify-between items-center p-4 px-8">
+                        <div className="flex items-center space-x-4 w-full">
                             {!isSidebarOpen && (
                                 <div className="cursor-pointer hover:text-purple-custom" onClick={() => setIsSidebarOpen(true)}>
                                     <PanelsTopLeft size={28} />
                                 </div>
                             )}
-                            
-                            
+                            <StoryBar/>
                         </div>
                         <button className="btn btn-md bg-gray-800 bg-opacity-60 font-normal text-white">+ Add a Journal Entry</button>
                     </div>
                     
                     {/* COLLECTION OF STORIES */}
-                    <div className="flex flex-col p-8">
+                    <div className="flex flex-col px-8 py-4">
                         <h1 className="text-3xl font-normal text-white opacity-90">Recent journal entries</h1>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 ">
                             {recentEntries.map((entry, index) => (
