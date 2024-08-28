@@ -76,7 +76,7 @@ const Stories = () => {
                     
                     {/* COLLECTION OF STORIES */}
                     <div className="flex flex-col px-8 py-4">
-                        <h1 className="text-3xl font-light text-white opacity-90">Your journal entries</h1>
+                        <h1 className="text-3xl font-normal text-white opacity-90">Your journal entries</h1>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 ">
                             {recentEntries.map((entry, index) => (
                                 <StoryCard key={index} {...entry} />

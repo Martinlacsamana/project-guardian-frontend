@@ -18,7 +18,7 @@ const StoryCard: React.FC<StoryCardProps> = ({ title, icon, createdAt, summary, 
     };
 
     return (
-        <div className="bg-gray-800 bg-opacity-90 rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow duration-300">
+        <div className=" border border-3 border-gray-800 bg-opacity-90 rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow duration-300">
             <div className="flex items-center mb-1">
                 <span className="text-2xl mr-2">{icon}</span>
                 <h2 className="text-lg font-semibold text-white opacity-90">{title}</h2>
