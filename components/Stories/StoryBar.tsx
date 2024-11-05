@@ -7,7 +7,7 @@ const StoryBar = () => {
             <div className="relative w-full">
                 <input 
                     type="text" 
-                    placeholder="Search for an entry..." 
+                    placeholder="Search for a story..." 
                     className="input w-full pl-10 pr-4 h-10 rounded-full border bg-gray-800 bg-opacity-80 placeholder-gray-500 text-gray-200 transition-all duration-200 focus:border-gray-600 focus:ring-1 focus:ring-gray-600"
                 />
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">

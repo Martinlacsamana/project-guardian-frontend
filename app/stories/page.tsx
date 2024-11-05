@@ -10,46 +10,46 @@ const Stories = () => {
 
     const recentEntries = [
         {
-            title: "My first journal entry",
-            icon: "📝",
-            createdAt: "Jan 1, 2024",
-            summary: "Reflected on my goals and aspirations for the year ahead. Identified key areas for personal and professional growth, setting the stage for a transformative year.",
-            sentiment: 85
+            title: "Finally Nailed That Recipe!",
+            icon: "🍝",
+            createdAt: "Jan 20, 2024",
+            summary: "After three failed attempts, I finally got my grandmother's pasta sauce recipe right! The secret was adding the basil at the very end. The kitchen smelled amazing, and it tasted just like I remember from childhood.",
+            sentiment: 95
         },
         {
-            title: "Reflections on 2023",
-            icon: "🎉",
-            createdAt: "Dec 31, 2023",
-            summary: "Analyzed the ups and downs of the past year and lessons learned. Celebrated achievements while acknowledging areas for improvement in the coming year.",
-            sentiment: 70
+            title: "Tough Day at Work",
+            icon: "😮‍💨",
+            createdAt: "Jan 19, 2024",
+            summary: "Had a challenging meeting where my presentation didn't go as planned. Feeling down but trying to remember that one setback doesn't define me. Planning to practice more for next time.",
+            sentiment: 35
         },
         {
-            title: "Goals for Q1 2024",
-            icon: "🎯",
-            createdAt: "Jan 3, 2024",
-            summary: "Set ambitious but achievable targets for the first quarter. Outlined specific action steps and milestones to track progress towards these goals.",
+            title: "Morning Run Breakthrough",
+            icon: "🏃",
+            createdAt: "Jan 18, 2024",
+            summary: "Finally broke my 5k record! The morning was crisp and perfect for running. Found a new route through the park that really helped me stay motivated. Feeling proud of my progress.",
             sentiment: 90
         },
         {
-            title: "Project X Brainstorming",
-            icon: "💡",
+            title: "Coffee with Sarah",
+            icon: "☕",
+            createdAt: "Jan 17, 2024",
+            summary: "Caught up with Sarah after months. We talked for hours about life, relationships, and our dreams. It's amazing how some friendships just pick up right where they left off.",
+            sentiment: 85
+        },
+        {
+            title: "Dealing with Anxiety",
+            icon: "🫂",
+            createdAt: "Jan 16, 2024",
+            summary: "Felt overwhelmed about the upcoming project deadlines. Tried the new breathing exercises my therapist suggested. They actually helped more than I expected. Taking it one day at a time.",
+            sentiment: 45
+        },
+        {
+            title: "Weekend Garden Victory",
+            icon: "🌺",
             createdAt: "Jan 15, 2024",
-            summary: "Explored innovative ideas for our upcoming major project. Generated a list of potential features and discussed their feasibility and impact on user experience.",
-            sentiment: 65
-        },
-        {
-            title: "Weekly Team Updates",
-            icon: "📅",
-            createdAt: "Jan 8, 2024",
-            summary: "Summarized progress and challenges faced by each team member. Identified common obstacles and brainstormed solutions to improve overall team efficiency.",
-            sentiment: 50
-        },
-        {
-            title: "Personal Growth Reflections",
-            icon: "🌱",
-            createdAt: "Jan 20, 2024",
-            summary: "Contemplated areas of personal development and growth opportunities. Crafted a plan to acquire new skills and expand my comfort zone in both personal and professional spheres.",
-            sentiment: 75
+            summary: "My first orchid finally bloomed! After months of careful watering and probably too much worry, seeing those purple petals open up made all the effort worth it. Nature is amazing.",
+            sentiment: 88
         }
     ];
 
@@ -61,22 +61,26 @@ const Stories = () => {
                 <div className="max-w-7xl mx-auto">
 
 
-                    {/* HEADER */}
-                    <div className="flex justify-between items-center p-4 px-8">
-                        <div className="flex items-center space-x-4 w-full">
-                            {!isSidebarOpen && (
-                                <div className="cursor-pointer hover:text-purple-custom" onClick={() => setIsSidebarOpen(true)}>
-                                    <PanelsTopLeft size={28} />
-                                </div>
-                            )}
-                            <StoryBar/>
+                    {/* LIBRARY PAGE */}
+                    <div className="flex flex-col px-8 py-8">
+
+                        {/* HEADER */}
+                        <div className="flex justify-between items-center">
+                            <div className="flex items-center space-x-4 w-full">
+                                {!isSidebarOpen && (
+                                    <div className="cursor-pointer hover:text-purple-custom" onClick={() => setIsSidebarOpen(true)}>
+                                        <PanelsTopLeft size={22} className="text-white opacity-80" />
+                                    </div>
+                                )}
+                                <StoryBar/>
+                            </div>
+                          
+                            <button className="btn btn-md bg-gray-800 bg-opacity-80 font-normal text-white text-opacity-90 hover:bg-gray-600"> <span className="text-xl">+</span> Add a thought</button>
+                            
                         </div>
-                        <button className="btn btn-md bg-gray-800 bg-opacity-80 font-normal text-white text-opacity-90 hover:bg-gray-600"> <span className="text-xl">+</span> Add a Journal Entry</button>
-                    </div>
-                    
-                    {/* COLLECTION OF STORIES */}
-                    <div className="flex flex-col px-8 py-4">
-                        <h1 className="text-3xl font-normal text-white opacity-90">Your journal entries</h1>
+                        
+
+                        {/* COLLECTION OF STORIES */}
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 ">
                             {recentEntries.map((entry, index) => (
                                 <StoryCard key={index} {...entry} />

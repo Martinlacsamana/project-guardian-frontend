@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { PanelsTopLeft, FileText, Flag, Book, AlertCircle, Home, MessageCircle, HelpCircle, UserPlus, Archive } from 'lucide-react';
+import { PanelsTopLeft, FileText, Flag, Book, AlertCircle, Home, MessageCircle, HelpCircle, UserPlus, Archive, Mic, Star, Calendar, Smile } from 'lucide-react';
 
 interface Props {
     isSidebarOpen: boolean;
@@ -13,20 +13,19 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }: Props) => {
         setIsSidebarOpen(false);
     };
 
-    const favoriteItems = [
-        { name: 'Technical Docs', icon: FileText },
-        { name: 'Campaign Guidelines', icon: Flag },
-        { name: 'Important Rules', icon: Book },
-        { name: 'Onboarding', icon: AlertCircle },
+    const journalingTools = [
+        { name: 'AI Conversation', icon: MessageCircle, description: 'Journal through a guided conversation with AI' },
+        { name: 'Quick Entry', icon: FileText, description: 'Traditional journal entry with text editor' },
+        { name: 'Voice Notes', icon: Mic, description: 'Record your thoughts and convert to text' },
+        { name: 'Guided Prompts', icon: HelpCircle, description: 'Use writing prompts to inspire your entry' },
     ];
 
-    const mainMenuItems = [
-        { name: 'Dashboard', icon: Home },
-        { name: 'Campaigns', icon: Flag },
-        { name: 'Chat', icon: MessageCircle },
-        { name: 'Support Center', icon: HelpCircle },
-        { name: 'Leads', icon: UserPlus },
-        { name: 'Archive', icon: Archive },
+    const libraryViews = [
+        { name: 'All Entries', icon: Book, description: 'View all your journal entries' },
+        { name: 'Favorites', icon: Star, description: 'Your marked favorite entries' },
+        { name: 'By Mood', icon: Smile, description: 'Browse entries by sentiment' },
+        { name: 'Calendar', icon: Calendar, description: 'View entries by date' },
+        { name: 'Archive', icon: Archive, description: 'Past entries you\'ve archived' },
     ];
 
     return (
@@ -34,7 +33,7 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }: Props) => {
             <div className="h-full flex flex-col w-64 p-3">
                 {/* SIDEBAR HEADER */}
                 <div className="flex justify-between items-center px-3 pt-4 pb-6">
-                    <p className="text-sm font-semibold text-white opacity-90">Martin's Dashboard</p>
+                    <p className="text-sm font-semibold text-white opacity-90">Journal Space</p>
                     <div className="cursor-pointer text-gray-300 hover:text-white transition-colors duration-200" onClick={closeSidebar}>
                         <PanelsTopLeft size={22} />
                     </div>
@@ -42,27 +41,37 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }: Props) => {
 
                 {/* SIDEBAR CONTENT */}
                 <div className="px-3 flex-grow overflow-y-auto text-gray-300 pt-2">
-                    {/* Favorites Section */}
-                    <div className="mb-6">
-                        <h3 className="text-xs font-semibold mb-2 text-gray-300">Favorites</h3>
-                        <ul className="space-y-1 text-sm">
-                            {favoriteItems.map((item, index) => (
-                                <li key={index} className="flex items-center space-x-3 p-2 rounded hover:bg-gray-800 hover:bg-opacity-50 transition-all duration-200">
-                                    <item.icon size={18} className="text-gray-400" />
-                                    <span>{item.name}</span>
+                    {/* Create New Section */}
+                    <div className="mb-8">
+                        <h3 className="text-xs font-semibold mb-2 text-gray-300">CREATE NEW</h3>
+                        <ul className="space-y-3 text-sm">
+                            {journalingTools.map((item, index) => (
+                                <li key={index} className="group">
+                                    <button className="w-full flex items-center space-x-3 p-2 rounded hover:bg-gray-800 hover:bg-opacity-50 transition-all duration-200">
+                                        <item.icon size={18} className="text-gray-400" />
+                                        <div className="text-left">
+                                            <span className="block">{item.name}</span>
+                                            <span className="text-xs text-gray-500 group-hover:text-gray-400">{item.description}</span>
+                                        </div>
+                                    </button>
                                 </li>
                             ))}
                         </ul>
                     </div>
 
-                    {/* Main Menu Section */}
+                    {/* Library Views Section */}
                     <div>
-                        <h3 className="text-xs font-semibold mb-2 text-gray-300">Main Menu</h3>
-                        <ul className="space-y-1 text-sm">
-                            {mainMenuItems.map((item, index) => (
-                                <li key={index} className="flex items-center space-x-3 p-2 rounded hover:bg-gray-800 hover:bg-opacity-50 transition-all duration-200">
-                                    <item.icon size={18} className="text-gray-400" />
-                                    <span>{item.name}</span>
+                        <h3 className="text-xs font-semibold mb-2 text-gray-300">LIBRARY VIEWS</h3>
+                        <ul className="space-y-3 text-sm">
+                            {libraryViews.map((item, index) => (
+                                <li key={index} className="group">
+                                    <button className="w-full flex items-center space-x-3 p-2 rounded hover:bg-gray-800 hover:bg-opacity-50 transition-all duration-200">
+                                        <item.icon size={18} className="text-gray-400" />
+                                        <div className="text-left">
+                                            <span className="block">{item.name}</span>
+                                            <span className="text-xs text-gray-500 group-hover:text-gray-400">{item.description}</span>
+                                        </div>
+                                    </button>
                                 </li>
                             ))}
                         </ul>

@@ -22,8 +22,9 @@ const StoryCard: React.FC<StoryCardProps> = ({ title, icon, createdAt, summary, 
         <div className="border border-3 border-gray-800 bg-opacity-90 rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col h-full relative group">
             {/* Overlay */}
             <div className="absolute inset-0 cursor-pointer bg-gray-800 bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg space-x-1">
-                <span className="text-white text-lg font-semibold">View </span>
                 <Eye/>
+                <span className="text-white text-lg font-semibold">View </span>
+                
             </div>
             
             <div className="flex-grow">
